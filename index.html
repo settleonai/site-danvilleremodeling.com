@@ -1,256 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danville Remodeling — Kitchen & Bathroom Remodeling in Danville & the San Ramon Valley</title>
-    <meta name="description" content="Professional kitchen and bathroom remodeling in Danville & the San Ramon Valley. 35% off kitchens, 25% off bathrooms, free 3D design. Licensed & insured. 21+ years experience.">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; line-height: 1.6; }
-        
-        .hero {
-            background: linear-gradient(135deg, rgba(15,23,42,0.92), rgba(30,58,95,0.88)),
-                        url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80') center/cover;
-            color: white;
-            padding: 80px 20px 100px;
-            text-align: center;
-        }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 16px; font-weight: 800; letter-spacing: -0.5px; }
-        .hero p { font-size: 1.25rem; opacity: 0.9; max-width: 600px; margin: 0 auto 32px; }
-        .hero-badge { display: inline-block; background: rgba(255,255,255,0.15); padding: 6px 16px; border-radius: 20px; font-size: 0.9rem; margin-bottom: 24px; }
-        
-        .cta-btn {
-            display: inline-block;
-            background: #f59e0b;
-            color: #1a1a1a;
-            padding: 16px 40px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,158,11,0.4); }
-        
-        .phone-link { display: block; margin-top: 16px; color: white; font-size: 1.1rem; text-decoration: none; opacity: 0.9; }
-        .phone-link:hover { opacity: 1; }
-        
-        .offers {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            max-width: 960px;
-            margin: -50px auto 60px;
-            padding: 0 20px;
-        }
-        .offer-card {
-            background: white;
-            border-radius: 12px;
-            padding: 32px 24px;
-            text-align: center;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
-        }
-        .offer-card .discount { font-size: 2.4rem; font-weight: 800; color: #f59e0b; }
-        .offer-card h3 { margin: 8px 0; font-size: 1.2rem; }
-        .offer-card p { color: #666; font-size: 0.95rem; }
-        
-        .section { padding: 60px 20px; max-width: 960px; margin: 0 auto; }
-        .section h2 { font-size: 2rem; margin-bottom: 16px; text-align: center; font-weight: 700; }
-        .section .subtitle { text-align: center; color: #666; margin-bottom: 40px; font-size: 1.05rem; }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
-        }
-        .service-item {
-            background: #f8fafc;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        .service-item img { width: 100%; height: 200px; object-fit: cover; }
-        .service-item .content { padding: 20px; }
-        .service-item h3 { font-size: 1.15rem; margin-bottom: 8px; }
-        .service-item p { color: #666; font-size: 0.9rem; }
-        
-        .process {
-            background: #f8fafc;
-            padding: 60px 20px;
-        }
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 24px;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-        .step { text-align: center; padding: 20px; }
-        .step-num {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px; height: 48px;
-            background: #1e3a5f;
-            color: white;
-            border-radius: 50%;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-        }
-        .step h3 { margin-bottom: 8px; font-size: 1.05rem; }
-        .step p { color: #666; font-size: 0.9rem; }
-        
-        .trust {
-            text-align: center;
-            padding: 40px 20px;
-        }
-        .trust-items { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 20px; }
-        .trust-item { text-align: center; }
-        .trust-item .num { font-size: 2rem; font-weight: 800; color: #1e3a5f; }
-        .trust-item .label { color: #666; font-size: 0.9rem; }
-        
-        .cta-section {
-            background: linear-gradient(135deg, #1e3a5f, #0f172a);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-        .cta-section h2 { font-size: 2rem; margin-bottom: 12px; }
-        .cta-section p { opacity: 0.9; margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto; }
-        
-        footer {
-            background: #0f172a;
-            color: rgba(255,255,255,0.6);
-            text-align: center;
-            padding: 24px 20px;
-            font-size: 0.85rem;
-        }
-        footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
-        
-        @media (max-width: 640px) {
-            .hero h1 { font-size: 2rem; }
-            .offers { grid-template-columns: 1fr; margin-top: -30px; }
-            .trust-items { gap: 24px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danville Remodeling — Kitchen & Bathroom Remodeling in Danville</title>
+<meta name="description" content="Danville's trusted home remodeling experts. Kitchen, bathroom & full home remodeling in Danville, Blackhawk, and the San Ramon Valley. 21+ years experience, licensed & insured.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --navy: #1B2A41;
+  --amber: #D97706;
+  --amber-light: #F59E0B;
+  --white: #FFFFFF;
+  --gray-bg: #F8FAFC;
+  --charcoal: #374151;
+  --charcoal-light: #6B7280;
+}
+body { font-family: 'Inter', sans-serif; color: var(--charcoal); line-height: 1.6; }
+h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; color: var(--navy); line-height: 1.2; }
+
+/* HEADER */
+.top-bar { background: var(--navy); color: var(--white); padding: 10px 0; font-size: 14px; }
+.top-bar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.top-bar a { color: var(--amber-light); text-decoration: none; font-weight: 600; }
+header { background: var(--white); border-bottom: 1px solid #E5E7EB; position: sticky; top: 0; z-index: 100; }
+header .container { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; }
+.logo { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--navy); text-decoration: none; }
+.logo span { color: var(--amber); }
+nav { display: flex; gap: 28px; align-items: center; }
+nav a { text-decoration: none; color: var(--charcoal); font-size: 15px; font-weight: 500; transition: color 0.2s; }
+nav a:hover { color: var(--amber); }
+.btn { display: inline-block; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 15px; transition: all 0.25s; cursor: pointer; border: none; }
+.btn-primary { background: var(--amber); color: var(--white); }
+.btn-primary:hover { background: #B45309; transform: translateY(-1px); }
+.btn-outline { border: 2px solid var(--amber); color: var(--amber); background: transparent; }
+.btn-outline:hover { background: var(--amber); color: var(--white); }
+.btn-white { background: var(--white); color: var(--navy); }
+.btn-white:hover { background: #F1F5F9; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* HERO — full-width image with overlay */
+.hero { position: relative; min-height: 85vh; display: flex; align-items: center; background: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80') center/cover no-repeat; }
+.hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(27,42,65,0.88) 0%, rgba(27,42,65,0.55) 100%); }
+.hero-content { position: relative; z-index: 2; max-width: 680px; color: var(--white); padding: 80px 0; }
+.hero-badge { display: inline-block; background: var(--amber); color: var(--white); padding: 6px 16px; border-radius: 4px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+.hero h1 { font-size: clamp(36px, 5vw, 58px); margin-bottom: 20px; color: var(--white); }
+.hero p { font-size: 19px; line-height: 1.7; opacity: 0.92; margin-bottom: 32px; }
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero-stats { display: flex; gap: 40px; margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.2); }
+.hero-stat strong { display: block; font-size: 28px; font-family: 'DM Serif Display', serif; color: var(--amber-light); }
+.hero-stat span { font-size: 13px; opacity: 0.8; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* OFFERS */
+.offers { padding: 80px 0; background: var(--gray-bg); }
+.offers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; }
+.offer-card { background: var(--white); border-radius: 12px; padding: 36px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border: 1px solid #E5E7EB; transition: transform 0.25s, box-shadow 0.25s; }
+.offer-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
+.offer-pct { font-family: 'DM Serif Display', serif; font-size: 48px; color: var(--amber); line-height: 1; }
+.offer-label { font-size: 14px; color: var(--charcoal-light); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+.offer-card h3 { margin-top: 16px; font-size: 22px; }
+.offer-card p { margin-top: 8px; color: var(--charcoal-light); font-size: 15px; }
+.section-label { display: inline-block; color: var(--amber); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; }
+.section-title { font-size: clamp(28px, 4vw, 42px); margin-bottom: 16px; }
+.section-subtitle { color: var(--charcoal-light); font-size: 17px; max-width: 640px; }
+.text-center { text-align: center; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* SERVICES */
+.services { padding: 80px 0; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 48px; }
+.service-item { display: flex; gap: 20px; align-items: flex-start; }
+.service-icon { flex-shrink: 0; width: 56px; height: 56px; background: var(--navy); color: var(--white); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+.service-item h3 { font-size: 20px; margin-bottom: 6px; }
+.service-item p { color: var(--charcoal-light); font-size: 15px; }
+
+/* PROCESS */
+.process { padding: 80px 0; background: var(--navy); color: var(--white); }
+.process h2, .process h3 { color: var(--white); }
+.process .section-label { color: var(--amber-light); }
+.process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; margin-top: 48px; }
+.step { text-align: center; }
+.step-number { width: 52px; height: 52px; border-radius: 50%; border: 2px solid var(--amber); color: var(--amber-light); display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 22px; margin: 0 auto 16px; }
+.step h3 { font-size: 18px; margin-bottom: 8px; }
+.step p { font-size: 14px; opacity: 0.75; }
+
+/* REVIEWS */
+.reviews { padding: 80px 0; background: var(--gray-bg); }
+.reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; margin-top: 48px; }
+.review-card { background: var(--white); border-radius: 12px; padding: 36px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border: 1px solid #E5E7EB; }
+.review-stars { color: var(--amber); font-size: 18px; letter-spacing: 2px; margin-bottom: 16px; }
+.review-card blockquote { font-size: 16px; line-height: 1.7; color: var(--charcoal); font-style: italic; margin-bottom: 20px; }
+.review-author { font-weight: 600; color: var(--navy); }
+.review-location { font-size: 14px; color: var(--charcoal-light); }
+
+/* LOCAL SECTION */
+.local { padding: 80px 0; }
+.local-split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-top: 40px; }
+.local-img { border-radius: 12px; width: 100%; height: 420px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.local-text h3 { font-size: 28px; margin-bottom: 16px; }
+.local-text p { color: var(--charcoal-light); font-size: 16px; margin-bottom: 16px; line-height: 1.8; }
+.local-text ul { list-style: none; margin-top: 20px; }
+.local-text ul li { padding: 8px 0; padding-left: 24px; position: relative; color: var(--charcoal); font-size: 15px; }
+.local-text ul li::before { content: ''; position: absolute; left: 0; top: 16px; width: 10px; height: 10px; background: var(--amber); border-radius: 2px; }
+
+/* CTA */
+.cta { padding: 80px 0; background: linear-gradient(135deg, var(--navy) 0%, #243B53 100%); color: var(--white); text-align: center; }
+.cta h2 { color: var(--white); font-size: clamp(30px, 4vw, 44px); margin-bottom: 16px; }
+.cta p { opacity: 0.85; font-size: 18px; max-width: 560px; margin: 0 auto 32px; }
+.cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.cta-phone { font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--amber-light); margin-top: 28px; }
+.cta-phone a { color: var(--amber-light); text-decoration: none; }
+
+/* FOOTER */
+footer { background: #0F1924; color: rgba(255,255,255,0.6); padding: 48px 0 24px; font-size: 14px; }
+footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+footer a { color: var(--amber-light); text-decoration: none; }
+
+/* MOBILE NAV */
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--navy); margin: 5px 0; transition: 0.3s; }
+
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 24px; gap: 16px; border-bottom: 1px solid #E5E7EB; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+  nav.open { display: flex; }
+  .hero-stats { flex-wrap: wrap; gap: 24px; }
+  .local-split { grid-template-columns: 1fr; gap: 32px; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .hero { min-height: 70vh; }
+  .top-bar .container { justify-content: center; text-align: center; }
+}
+</style>
 </head>
 <body>
-    <section class="hero">
-        <div class="hero-badge">Serving Danville & the San Ramon Valley — Licensed & Insured</div>
-        <h1>Premium Home Remodeling in Danville</h1>
-        <p>Danville's finest kitchens and bathrooms start with exceptional design and expert craftsmanship.</p>
-        <a href="tel:4159079070" class="cta-btn">Get Your Free Estimate</a>
-        <a href="tel:4159079070" class="phone-link">Or call us: (415) 907-9070</a>
-    </section>
 
-    <div class="offers">
-        <div class="offer-card">
-            <div class="discount">35% Off</div>
-            <h3>Kitchen Remodels</h3>
-            <p>Transform your kitchen with a complete remodel at an unbeatable price.</p>
-        </div>
-        <div class="offer-card">
-            <div class="discount">25% Off</div>
-            <h3>Bathroom Remodels</h3>
-            <p>Upgrade your bathroom with quality renovations tailored to your style.</p>
-        </div>
-        <div class="offer-card">
-            <div class="discount">Free</div>
-            <h3>3D Design & Rendering</h3>
-            <p>See your dream space before we build it with complimentary 3D designs.</p>
-        </div>
+<div class="top-bar">
+  <div class="container">
+    <span>Serving Danville, Blackhawk & the San Ramon Valley</span>
+    <a href="tel:4159079070">(415) 907-9070 — Free Consultation</a>
+  </div>
+</div>
+
+<header>
+  <div class="container">
+    <a href="#" class="logo">Danville<span>Remodeling</span></a>
+    <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#local">About</a>
+      <a href="tel:4159079070" class="btn btn-primary">Call Now</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-badge">Licensed & Insured Contractor</span>
+      <h1>Danville's Trusted Home Remodeling Experts</h1>
+      <p>Premium kitchen, bathroom, and full home remodeling for Danville's finest residences. From Blackhawk estates to classic San Ramon Valley homes, we bring 21+ years of craftsmanship to every project.</p>
+      <div class="hero-actions">
+        <a href="tel:4159079070" class="btn btn-primary">Get Free Consultation</a>
+        <a href="#services" class="btn btn-white">View Our Work</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>21+</strong><span>Years Experience</span></div>
+        <div class="hero-stat"><strong>200+</strong><span>5-Star Reviews</span></div>
+        <div class="hero-stat"><strong>$0</strong><span>Down to Start</span></div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <section class="section">
-        <h2>Our Services</h2>
-        <p class="subtitle">From kitchens and bathrooms to full home renovations, we handle it all.</p>
-        <div class="services-grid">
-            <div class="service-item">
-                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Kitchen Remodeling">
-                <div class="content">
-                    <h3>Kitchen Remodeling</h3>
-                    <p>Custom cabinetry, countertops, fixtures, and layouts designed around how you live.</p>
-                </div>
-            </div>
-            <div class="service-item">
-                <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80" alt="Bathroom Remodeling">
-                <div class="content">
-                    <h3>Bathroom Remodeling</h3>
-                    <p>Modern bathrooms with premium materials, expert tile work, and smart design.</p>
-                </div>
-            </div>
-            <div class="service-item">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Full Home Renovation">
-                <div class="content">
-                    <h3>Full Home Renovation</h3>
-                    <p>Complete home transformations that increase your property value and quality of life.</p>
-                </div>
-            </div>
+<section class="offers">
+  <div class="container text-center">
+    <span class="section-label">Limited-Time Offers</span>
+    <h2 class="section-title">Exclusive Savings for Danville Homeowners</h2>
+    <p class="section-subtitle mx-auto">Start your dream remodel today with premium materials, expert design, and unbeatable value.</p>
+    <div class="offers-grid">
+      <div class="offer-card">
+        <div class="offer-pct">35%</div>
+        <div class="offer-label">Off</div>
+        <h3>Kitchen Remodeling</h3>
+        <p>Complete kitchen transformations worthy of your Danville home. Custom cabinetry, quartz countertops, and premium finishes.</p>
+      </div>
+      <div class="offer-card">
+        <div class="offer-pct">25%</div>
+        <div class="offer-label">Off</div>
+        <h3>Bathroom Remodeling</h3>
+        <p>Spa-inspired bathrooms with heated floors, frameless glass, and designer tile that match the luxury standard of Blackhawk.</p>
+      </div>
+      <div class="offer-card">
+        <div class="offer-pct">Free</div>
+        <div class="offer-label">Included</div>
+        <h3>3D Design Rendering</h3>
+        <p>Visualize your remodel before construction begins. Full 3D renderings so you know exactly what your space will look like.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <span class="section-label">What We Do</span>
+    <h2 class="section-title">Full-Service Remodeling for Danville Homes</h2>
+    <p class="section-subtitle">From gourmet kitchens to complete home transformations, we handle every detail with precision and care.</p>
+    <div class="services-grid">
+      <div class="service-item">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path d="M9 22V12h6v10"/></svg>
         </div>
-    </section>
-
-    <section class="process">
-        <div style="max-width:960px;margin:0 auto;">
-            <h2 style="text-align:center;margin-bottom:40px;">How It Works</h2>
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-num">1</div>
-                    <h3>Free Consultation</h3>
-                    <p>We visit your home, discuss your vision, and assess the project scope.</p>
-                </div>
-                <div class="step">
-                    <div class="step-num">2</div>
-                    <h3>3D Design</h3>
-                    <p>See your new space in 3D before construction begins. Completely free.</p>
-                </div>
-                <div class="step">
-                    <div class="step-num">3</div>
-                    <h3>Build & Install</h3>
-                    <p>Our expert team brings the design to life with quality craftsmanship.</p>
-                </div>
-                <div class="step">
-                    <div class="step-num">4</div>
-                    <h3>Final Walkthrough</h3>
-                    <p>We walk through every detail together to ensure your complete satisfaction.</p>
-                </div>
-            </div>
+        <div><h3>Kitchen Remodeling</h3><p>Complete kitchen renovations with custom cabinetry, stone countertops, premium appliances, and thoughtful layouts designed for how you live.</p></div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/></svg>
         </div>
-    </section>
-
-    <section class="trust">
-        <h2>Why Homeowners Trust Us</h2>
-        <div class="trust-items">
-            <div class="trust-item">
-                <div class="num">21+</div>
-                <div class="label">Years Experience</div>
-            </div>
-            <div class="trust-item">
-                <div class="num">200+</div>
-                <div class="label">5-Star Reviews</div>
-            </div>
-            <div class="trust-item">
-                <div class="num">500+</div>
-                <div class="label">Projects Completed</div>
-            </div>
-            <div class="trust-item">
-                <div class="num">100%</div>
-                <div class="label">Licensed & Insured</div>
-            </div>
+        <div><h3>Bathroom Remodeling</h3><p>Luxurious bathroom overhauls with walk-in showers, freestanding tubs, custom vanities, and high-end fixtures for a true spa experience.</p></div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
         </div>
-    </section>
+        <div><h3>Full Home Remodeling</h3><p>Whole-house renovations that reimagine your entire living space. We coordinate every trade and detail from start to finish.</p></div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+        </div>
+        <div><h3>ADU Construction</h3><p>Accessory dwelling units that add value and versatility to your Danville property. Full design-build from permits to completion.</p></div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div><h3>Home Additions</h3><p>Expand your living space with seamless room additions that blend perfectly with your home's existing architecture and style.</p></div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+        </div>
+        <div><h3>Outdoor Living</h3><p>Outdoor kitchens, patios, pergolas, and living spaces designed to take advantage of Danville's beautiful year-round weather.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="cta-section">
-        <h2>Ready to Transform Your Home?</h2>
-        <p>Get a free estimate and see what's possible with our complimentary 3D design service.</p>
-        <a href="tel:4159079070" class="cta-btn">Call (415) 907-9070</a>
-    </section>
+<section class="process" id="process">
+  <div class="container text-center">
+    <span class="section-label">How It Works</span>
+    <h2 class="section-title" style="color:var(--white)">Our Proven 5-Step Process</h2>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Free Consultation</h3>
+        <p>We visit your Danville home, discuss your vision, and take measurements at no cost.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Proposal in 12hrs</h3>
+        <p>Receive a detailed, transparent proposal within 12 hours of your consultation.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>3D Design</h3>
+        <p>See your remodel come to life with photorealistic 3D renderings before we start.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Materials Selection</h3>
+        <p>Choose from premium materials at our showroom with guidance from our design team.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">5</div>
+        <h3>Construction</h3>
+        <p>Our skilled crews bring your project to life with meticulous attention to detail.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer>
-        <p>Danville Remodeling — Serving Danville & the San Ramon Valley</p>
-        <p style="margin-top:8px;">Danville, CA</p>
-        <p style="margin-top:8px;"><a href="tel:4159079070">(415) 907-9070</a></p>
-        <p style="margin-top:16px;">&copy; 2026 Danville Remodeling. All rights reserved.</p>
-    </footer>
+<section class="reviews" id="reviews">
+  <div class="container text-center">
+    <span class="section-label">Homeowner Reviews</span>
+    <h2 class="section-title">Loved by Danville Families</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"We hired them to remodel our kitchen in Blackhawk and the result exceeded every expectation. The design team understood our vision for an open-concept space, and the construction crew was punctual, clean, and professional every single day. Our neighbors have already asked for their number."</blockquote>
+        <div class="review-author">Richard & Diane M.</div>
+        <div class="review-location">Blackhawk, Danville</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"After living near the Diablo Country Club for 15 years, we finally updated both of our bathrooms. The team was incredible — they handled everything from permits to the final walk-through. The heated floors and frameless shower are exactly what we wanted. Truly a first-class experience."</blockquote>
+        <div class="review-author">Catherine L.</div>
+        <div class="review-location">Diablo, Danville</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="local" id="local">
+  <div class="container">
+    <div class="local-split">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Luxury Danville home exterior" class="local-img">
+      <div class="local-text">
+        <span class="section-label">Proudly Local</span>
+        <h3>Remodeling the San Ramon Valley's Most Beautiful Homes</h3>
+        <p>Danville is home to some of the East Bay's most elegant residences, from the gated estates of Blackhawk to the tree-lined streets near downtown. We understand what Danville homeowners expect: exceptional craftsmanship, premium materials, and a seamless process from start to finish.</p>
+        <p>With 21+ years serving the San Ramon Valley, we've built a reputation for quality that matches the neighborhoods we work in. Licensed, insured, and deeply familiar with local building requirements and HOA standards.</p>
+        <ul>
+          <li>Blackhawk & Diablo Country Club area</li>
+          <li>Downtown Danville & Hartz Avenue corridor</li>
+          <li>San Ramon Valley family estates</li>
+          <li>Alamo, Diablo & surrounding communities</li>
+          <li>Financing available for qualified homeowners</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Ready to Transform Your Danville Home?</h2>
+    <p>Schedule your free in-home consultation today. We'll bring ideas, answer your questions, and provide a detailed proposal within 12 hours.</p>
+    <div class="cta-actions">
+      <a href="tel:4159079070" class="btn btn-primary">Call for Free Estimate</a>
+      <a href="#services" class="btn btn-outline" style="border-color:var(--amber-light);color:var(--amber-light);">View Services</a>
+    </div>
+    <div class="cta-phone"><a href="tel:4159079070">(415) 907-9070</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>Danville Remodeling &mdash; Licensed & Insured General Contractor &mdash; Serving Danville, Blackhawk, Alamo & San Ramon Valley</span>
+    <a href="tel:4159079070">(415) 907-9070</a>
+  </div>
+</footer>
+
 </body>
 </html>
