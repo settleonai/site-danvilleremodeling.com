@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{META_DESC}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --red:#B91C1C;--red-dark:#991B1B;--red-light:#DC2626;
+  --dark:#111111;--dark-mid:#1A1A1A;--dark-card:#222222;
+  --charcoal:#374151;--gray:#6B7280;--light:#F5F5F5;
+  --white:#FFFFFF;--gold:#B8976A;--radius:8px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--charcoal);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'DM Serif Display',Georgia,serif;color:var(--dark);line-height:1.2;font-weight:400}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* ── TOP BAR ── */
+.top-bar{background:var(--dark);color:rgba(255,255,255,0.7);font-size:13px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.08)}
+.top-bar-inner{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:0 24px;flex-wrap:wrap;gap:8px}
+.top-bar a{color:rgba(255,255,255,0.7);transition:color 0.2s}
+.top-bar a:hover{color:var(--red-light)}
+@media(max-width:600px){.top-bar{display:none}}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:100;background:var(--dark-mid);padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:0 24px}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo svg{width:44px;height:44px;fill:var(--red)}
+.nav-logo-text{font-family:'DM Serif Display',serif;font-size:22px;color:var(--white)}
+.nav-logo-text span{color:var(--red)}
+.nav-right{display:flex;align-items:center;gap:16px}
+.nav-phone-block{text-align:right;display:none}
+.nav-phone-label{font-size:12px;color:rgba(255,255,255,0.5);font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.nav-phone-num{font-family:'DM Serif Display',serif;font-size:20px;color:var(--white)}
+.nav-phone-num a{color:var(--white)}
+.nav-cta{background:var(--red);color:var(--white);padding:10px 24px;border-radius:var(--radius);font-weight:600;font-size:14px;transition:background 0.2s}
+.nav-cta:hover{background:var(--red-dark)}
+.nav-hamburger{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:1px}
+.nav-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);z-index:200;padding:80px 32px 32px;flex-direction:column}
+.nav-menu.open{display:flex}
+.nav-menu a{font-size:18px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.8);font-weight:500}
+.nav-menu a:hover{color:var(--red-light)}
+.nav-close{position:absolute;top:20px;right:24px;background:none;border:none;font-size:28px;cursor:pointer;color:var(--white);padding:8px}
+@media(min-width:768px){.nav-phone-block{display:block}}
+
+/* ── HERO ── */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;background:var(--dark);overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('images/outdoor-1.jpg') center/cover no-repeat;opacity:0.25}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;max-width:1200px;margin:0 auto;padding:80px 24px}
+.hero-text h1{font-size:clamp(36px,5vw,56px);color:var(--white);margin-bottom:24px;line-height:1.15}
+.hero-text h1 em{font-style:normal;color:var(--red-light)}
+.hero-list{list-style:none;margin-bottom:32px}
+.hero-list li{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.8);font-size:15px;padding:6px 0}
+.hero-list li::before{content:'✓';display:flex;align-items:center;justify-content:center;width:24px;height:24px;background:rgba(185,28,28,0.2);color:var(--red-light);border-radius:50%;font-size:12px;font-weight:700;flex-shrink:0}
+.hero-phone{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:var(--white);padding:14px 32px;border-radius:var(--radius);font-weight:700;font-size:16px;transition:background 0.2s}
+.hero-phone:hover{background:var(--red-dark)}
+.hero-phone svg{width:20px;height:20px;fill:var(--white)}
+.hero-form-wrap{background:var(--white);border-radius:12px;padding:36px;box-shadow:0 20px 60px rgba(0,0,0,0.4)}
+.hero-form-wrap .form-title{font-family:'DM Serif Display',serif;font-size:24px;color:var(--dark);text-align:center;margin-bottom:4px}
+.hero-form-wrap .form-sub{color:var(--gray);font-size:14px;text-align:center;margin-bottom:24px}
+.hero-form-wrap label{display:block;font-weight:600;font-size:13px;color:var(--dark);margin-bottom:4px}
+.hero-form-wrap input,.hero-form-wrap textarea{width:100%;padding:12px 16px;border:1px solid #d1d5db;border-radius:var(--radius);font-size:15px;font-family:'Inter',sans-serif;margin-bottom:14px;transition:border-color 0.2s}
+.hero-form-wrap input:focus,.hero-form-wrap textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(185,28,28,0.1)}
+.hero-form-wrap textarea{min-height:70px;resize:vertical}
+.hero-form-wrap button[type="submit"]{width:100%;background:var(--red);color:var(--white);padding:16px;border:none;border-radius:var(--radius);font-weight:700;font-size:16px;cursor:pointer;transition:background 0.2s;font-family:'Inter',sans-serif;text-transform:uppercase;letter-spacing:1px}
+.hero-form-wrap button[type="submit"]:hover{background:var(--red-dark)}
+.hero-form-wrap button:disabled{opacity:0.6;cursor:not-allowed}
+.form-status{text-align:center;margin-top:10px;font-size:14px;min-height:18px}
+.form-status.success{color:#16a34a}.form-status.error{color:#dc2626}
+.form-fallback{text-align:center;margin-top:8px;font-size:13px;color:var(--gray)}
+.form-fallback a{color:var(--red);font-weight:600}
+@media(max-width:768px){.hero-inner{grid-template-columns:1fr;gap:40px;padding:60px 24px}.hero{min-height:auto}}
+
+/* ── SECTION STYLING ── */
+.section{padding:100px 0}
+.section-dark{background:var(--dark);color:var(--white)}
+.section-dark h2,.section-dark h3{color:var(--white)}
+.section-alt{background:var(--light)}
+.section-header{text-align:center;margin-bottom:56px}
+.section-label{display:inline-block;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.section-title{font-size:clamp(28px,4vw,44px);margin-bottom:16px}
+.section-desc{color:var(--gray);font-size:17px;max-width:600px;margin:0 auto;line-height:1.7}
+.section-dark .section-desc{color:rgba(255,255,255,0.6)}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-text h2{margin-bottom:16px}
+.about-text p{color:var(--gray);font-size:16px;line-height:1.8;margin-bottom:16px}
+.about-stats{display:flex;gap:32px;margin-top:28px;padding-top:24px;border-top:1px solid #E5E7EB}
+.about-stat strong{display:block;font-family:'DM Serif Display',serif;font-size:32px;color:var(--red)}
+.about-stat span{font-size:13px;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.about-img{border-radius:12px;overflow:hidden;height:420px}
+.about-img img{width:100%;height:100%;object-fit:cover}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:32px}.about-img{height:280px;order:-1}}
+
+/* ── SERVICES ── */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc-card{background:var(--dark-card);border-radius:var(--radius);overflow:hidden;transition:transform 0.3s;border:1px solid rgba(255,255,255,0.06)}
+.svc-card:hover{transform:translateY(-4px)}
+.svc-card-img{height:200px;overflow:hidden}
+.svc-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
+.svc-card:hover .svc-card-img img{transform:scale(1.05)}
+.svc-card-body{padding:24px}
+.svc-card h3{font-size:20px;color:var(--white);margin-bottom:8px}
+.svc-card p{color:rgba(255,255,255,0.6);font-size:14px;line-height:1.6;margin-bottom:16px}
+.svc-card .read-more{font-weight:600;color:var(--red-light);font-size:14px;display:inline-flex;align-items:center;gap:6px}
+@media(max-width:1024px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.services-grid{grid-template-columns:1fr}}
+
+/* ── WHY CHOOSE US ── */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.why-item{padding:32px 20px;background:var(--white);border-radius:var(--radius);box-shadow:0 1px 3px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.06)}
+.why-icon{width:56px;height:56px;background:rgba(185,28,28,0.08);border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center}
+.why-icon svg{width:24px;height:24px;stroke:var(--red);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.why-item h3{font-size:18px;margin-bottom:8px}
+.why-item p{color:var(--gray);font-size:14px;line-height:1.6}
+@media(max-width:1024px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.why-grid{grid-template-columns:1fr}}
+
+/* ── REVIEWS ── */
+.reviews-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+.review-card{background:var(--dark-card);border-radius:var(--radius);padding:32px;border:1px solid rgba(255,255,255,0.06)}
+.review-stars{color:#F59E0B;font-size:18px;margin-bottom:16px;letter-spacing:2px}
+.review-card blockquote{font-size:15px;line-height:1.8;color:rgba(255,255,255,0.8);margin-bottom:20px;font-style:italic}
+.review-meta{display:flex;align-items:center;gap:12px}
+.review-avatar{width:40px;height:40px;background:rgba(185,28,28,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:16px;color:var(--red-light)}
+.review-name{font-weight:700;color:var(--white);font-size:14px}
+.review-loc{color:rgba(255,255,255,0.4);font-size:12px}
+@media(max-width:768px){.reviews-grid{grid-template-columns:1fr}}
+
+/* ── EMERGENCY CTA ── */
+.emergency{background:var(--red);padding:56px 0;text-align:center;color:var(--white)}
+.emergency h2{color:var(--white);font-size:clamp(24px,3.5vw,36px);margin-bottom:8px}
+.emergency-phone{font-family:'DM Serif Display',serif;font-size:clamp(28px,4vw,48px);color:var(--white);margin-top:12px}
+.emergency-phone a{color:var(--white)}
+
+/* ── FAQ ── */
+.faq-list{max-width:800px;margin:0 auto}
+.faq-item{border-bottom:1px solid #E5E7EB}
+.faq-q{width:100%;background:none;border:none;padding:20px 0;font-size:17px;font-weight:600;color:var(--dark);text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Inter',sans-serif;gap:16px}
+.faq-q:hover{color:var(--red)}
+.faq-q::after{content:'+';font-size:24px;font-weight:300;color:var(--red);transition:transform 0.3s;flex-shrink:0}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a p{padding:0 0 20px;color:var(--gray);line-height:1.7;font-size:15px}
+
+/* ── SERVICE AREAS ── */
+.areas-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;max-width:900px;margin:0 auto}
+.areas-grid a{display:block;padding:8px 16px;font-size:14px;color:var(--charcoal);border-radius:var(--radius);transition:all 0.2s;background:var(--white);border:1px solid rgba(0,0,0,0.06)}
+.areas-grid a:hover{background:var(--red);color:var(--white);border-color:var(--red)}
+
+/* ── FOOTER ── */
+.footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:56px 0 28px;border-top:1px solid rgba(255,255,255,0.06)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-brand{font-family:'DM Serif Display',serif;font-size:24px;color:var(--white);margin-bottom:16px}
+.footer-brand span{color:var(--red)}
+.footer-text{font-size:14px;line-height:1.7;margin-bottom:20px}
+.footer-contact a{color:var(--red-light);font-weight:600}
+.footer h4{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red-light);margin-bottom:16px;font-family:'Inter',sans-serif}
+.footer ul{list-style:none}
+.footer ul li{margin-bottom:8px}
+.footer ul a{color:rgba(255,255,255,0.6);font-size:14px;transition:color 0.2s}
+.footer ul a:hover{color:var(--red-light)}
+.footer-bar{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;font-size:13px;color:rgba(255,255,255,0.35);flex-wrap:wrap;gap:8px}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr}}
+
+/* ── STICKY BOTTOM CTA ── */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--dark-mid);border-top:1px solid rgba(255,255,255,0.08);padding:12px 24px;display:flex;justify-content:center;gap:12px;box-shadow:0 -4px 16px rgba(0,0,0,0.3)}
+.sticky-cta a{padding:12px 28px;border-radius:var(--radius);font-weight:600;font-size:15px;text-align:center;transition:all 0.2s}
+.sticky-phone{background:var(--red);color:var(--white);display:flex;align-items:center;gap:8px}
+.sticky-phone:hover{background:var(--red-dark)}
+.sticky-phone svg{width:16px;height:16px;fill:var(--white)}
+.sticky-estimate{background:var(--white);color:var(--dark)}
+.sticky-estimate:hover{background:var(--light)}
+
+@media(max-width:768px){.section{padding:72px 0} body{padding-bottom:60px}}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+<div class="top-bar-inner">
+  <span>Licensed & Insured &middot; CA Lic. #1079020</span>
+  <a href="tel:4159079070">(415) 907-9070 &middot; Free Estimates</a>
+</div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+<div class="nav-inner">
+  <a href="#" class="nav-logo">
+    <svg viewBox="0 0 50 50"><path d="M25 2L2 22h6v24h14V32h6v14h14V22h6L25 2zm0 6.5L40 22v20H34V28H16v14H10V22L25 8.5z"/></svg>
+    <div class="nav-logo-text">{{LOGO}}</div>
+  </a>
+  <div class="nav-right">
+    <div class="nav-phone-block">
+      <div class="nav-phone-label">Free Call</div>
+      <div class="nav-phone-num"><a href="tel:4159079070">(415) 907-9070</a></div>
+    </div>
+    <a href="#contact" class="nav-cta">Free Estimate</a>
+    <button class="nav-hamburger" onclick="document.getElementById('navMenu').classList.add('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</div>
+</nav>
+<div class="nav-menu" id="navMenu">
+  <button class="nav-close" onclick="document.getElementById('navMenu').classList.remove('open')">&times;</button>
+  <a href="#about" onclick="document.getElementById('navMenu').classList.remove('open')">About Us</a>
+  <a href="#services" onclick="document.getElementById('navMenu').classList.remove('open')">Services</a>
+  <a href="#reviews" onclick="document.getElementById('navMenu').classList.remove('open')">Reviews</a>
+  <a href="#faq" onclick="document.getElementById('navMenu').classList.remove('open')">FAQ</a>
+  <a href="#contact" onclick="document.getElementById('navMenu').classList.remove('open')">Contact</a>
+  <a href="tel:4159079070">(415) 907-9070</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="contact">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>Where Quality Meets <em>Roofing Excellence</em></h1>
+      <ul class="hero-list">
+        <li>Fully Insured and Certified Professionals</li>
+        <li>No-Cost, Transparent Quotations</li>
+        <li>Rapid Same-Day Service Availability</li>
+        <li>Trusted Family Operated Establishment</li>
+        <li>21+ Years of Industry Expertise</li>
+      </ul>
+      <a href="tel:4159079070" class="hero-phone">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (415) 907-9070
+      </a>
+    </div>
+    <div class="hero-form-wrap">
+      <div class="form-title">Get a Free Estimate</div>
+      <div class="form-sub">We respond within 24 hours</div>
+      <form id="contactForm" novalidate>
+        <label for="cf-name">Full Name</label>
+        <input type="text" id="cf-name" name="name" required placeholder="Your full name" autocomplete="name">
+        <label for="cf-phone">Phone Number</label>
+        <input type="tel" id="cf-phone" name="phone" required placeholder="(555) 123-4567" autocomplete="tel">
+        <label for="cf-email">Email Address</label>
+        <input type="email" id="cf-email" name="email" required placeholder="you@example.com" autocomplete="email">
+        <label for="cf-message">Tell us about your project</label>
+        <textarea id="cf-message" name="message" required placeholder="Roof repair, replacement, inspection — whatever you need."></textarea>
+        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+        <button type="submit">Get a Free Estimate</button>
+        <div class="form-status" id="formStatus"></div>
+        <div class="form-fallback">Or call: <a href="tel:4159079070">(415) 907-9070</a></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+<div class="container">
+  <div class="about-grid">
+    <div class="about-text">
+      <div class="section-label">About Us</div>
+      <h2>Committed to High Quality Roofing Services</h2>
+      <p>{{ABOUT_TEXT}}</p>
+      <p>We specialize in both residential and commercial roofing — from minor repairs to complete roof replacements. Our team uses premium materials and proven techniques to ensure your roof protects your home for decades.</p>
+      <div class="about-stats">
+        <div class="about-stat"><strong>21+</strong><span>Years Experience</span></div>
+        <div class="about-stat"><strong>200+</strong><span>5-Star Reviews</span></div>
+        <div class="about-stat"><strong>$0</strong><span>Down to Start</span></div>
+      </div>
+    </div>
+    <div class="about-img"><img src="images/outdoor-1.jpg" alt="Roofing work" loading="lazy"></div>
+  </div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section-dark" id="services">
+<div class="container">
+  <div class="section-header">
+    <div class="section-label" style="color:var(--red-light)">What We Do</div>
+    <h2 class="section-title">Leading Roof Repair & Re-Roofing Services</h2>
+    <p class="section-desc">Expert roofing for residential and commercial properties across the Bay Area.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card"><div class="svc-card-img"><img src="images/outdoor-2.jpg" alt="Roof Repair" loading="lazy"></div><div class="svc-card-body"><h3>Roof Repair</h3><p>Fast, reliable repairs for leaks, missing shingles, storm damage, and wear. We fix it right the first time.</p><a href="#contact" class="read-more">Get a Quote &rarr;</a></div></div>
+    <div class="svc-card"><div class="svc-card-img"><img src="images/outdoor-3.jpg" alt="Roof Replacement" loading="lazy"></div><div class="svc-card-body"><h3>Roof Replacement</h3><p>Complete tear-off and new installation with premium architectural shingles, tile, or metal roofing.</p><a href="#contact" class="read-more">Get a Quote &rarr;</a></div></div>
+    <div class="svc-card"><div class="svc-card-img"><img src="images/outdoor-4.jpg" alt="Roof Inspection" loading="lazy"></div><div class="svc-card-body"><h3>Roof Inspection</h3><p>Comprehensive inspections with detailed reports. Know your roof's condition before problems start.</p><a href="#contact" class="read-more">Get a Quote &rarr;</a></div></div>
+    <div class="svc-card"><div class="svc-card-img"><img src="images/detail-1.jpg" alt="Gutter Services" loading="lazy"></div><div class="svc-card-body"><h3>Gutter Services</h3><p>Seamless gutter installation, repair, and guards. Protect your foundation from water damage.</p><a href="#contact" class="read-more">Get a Quote &rarr;</a></div></div>
+    <div class="svc-card"><div class="svc-card-img"><img src="images/kitchen-10.jpg" alt="Flat Roofing" loading="lazy"></div><div class="svc-card-body"><h3>Flat Roofing</h3><p>TPO, EPDM, and modified bitumen systems for flat and low-slope roofs. Commercial-grade solutions.</p><a href="#contact" class="read-more">Get a Quote &rarr;</a></div></div>
+    <div class="svc-card"><div class="svc-card-img"><img src="images/kitchen-12.jpg" alt="Storm Damage" loading="lazy"></div><div class="svc-card-body"><h3>Storm Damage</h3><p>24-hour emergency response. Insurance claim assistance, temporary repairs, and full restoration.</p><a href="#contact" class="read-more">Get a Quote &rarr;</a></div></div>
+  </div>
+</div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section" id="why">
+<div class="container">
+  <div class="section-header">
+    <div class="section-label">Why Choose Us</div>
+    <h2 class="section-title">People Choose Us for Quality Craftsmanship</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-item"><div class="why-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>Quick & Easy</h3><p>Fast response times and streamlined process from estimate to completion.</p></div>
+    <div class="why-item"><div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h3>Fast & Accurate</h3><p>Detailed estimates within 24 hours. No guesswork, no surprises.</p></div>
+    <div class="why-item"><div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Licensed & Insured</h3><p>CA Lic. #1079020. Full coverage for your peace of mind.</p></div>
+    <div class="why-item"><div class="why-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><h3>5-Star Rated</h3><p>200+ glowing reviews across Google, Yelp, and more.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- EMERGENCY CTA -->
+<section class="emergency">
+  <div class="container">
+    <h2>Roof Emergency? We're Here 24/7</h2>
+    <p style="opacity:0.85;font-size:17px;margin-top:8px">Storm damage, active leaks, fallen trees — call us now for immediate help.</p>
+    <div class="emergency-phone"><a href="tel:4159079070">(415) 907-9070</a></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section section-dark" id="reviews">
+<div class="container">
+  <div class="section-header">
+    <div class="section-label" style="color:var(--red-light)">Testimonials</div>
+    <h2 class="section-title">Our Clients' Reviews</h2>
+    <p class="section-desc">See what Bay Area homeowners say about our roofing work.</p>
+  </div>
+  <div class="reviews-grid">
+    {{REVIEWS_HTML}}
+  </div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt" id="faq">
+<div class="container">
+  <div class="section-header">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What types of roofing services do you offer?</button><div class="faq-a"><p>We specialize in both residential and commercial roofing. Our services include roof repairs, complete replacements, new construction, flat roofing, gutter installation, and storm damage restoration for shingle, metal, tile, and flat roofs.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Are you licensed and insured?</button><div class="faq-a"><p>Yes. We are a fully licensed and insured roofing contractor (CA Lic. #1079020). Our team carries contractor liability insurance for your complete peace of mind.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How can I get a free estimate?</button><div class="faq-a"><p>Simply call us at (415) 907-9070 or fill out the form on this page. We'll schedule a convenient time to assess your roof and provide a detailed, no-obligation estimate.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do you work with insurance companies?</button><div class="faq-a"><p>Yes. We have extensive experience working with insurance companies on storm damage and other covered claims. We help document the damage and work directly with your adjuster to streamline the process.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long does a typical roofing project take?</button><div class="faq-a"><p>Most residential roof repairs are completed in 1-2 days. A full roof replacement typically takes 3-5 days depending on the size and complexity. We always provide a clear timeline before starting.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What areas do you serve?</button><div class="faq-a"><p>We serve {{AREA}} and surrounding communities including {{NEIGHBORHOODS_TEXT}}. Contact us to confirm service availability in your area.</p></div></div>
+  </div>
+</div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="section">
+<div class="container">
+  <div class="section-header">
+    <div class="section-label">Coverage</div>
+    <h2 class="section-title">Our Service Areas</h2>
+  </div>
+  <div class="areas-grid">
+    {{AREAS_HTML}}
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">{{LOGO}}</div>
+      <p class="footer-text">{{FOOTER_DESC}}</p>
+      <div class="footer-contact">Phone: <a href="tel:4159079070">(415) 907-9070</a></div>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Roof Repair</a></li>
+        <li><a href="#services">Roof Replacement</a></li>
+        <li><a href="#services">Roof Inspection</a></li>
+        <li><a href="#services">Gutter Services</a></li>
+        <li><a href="#services">Flat Roofing</a></li>
+        <li><a href="#services">Storm Damage</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <span>{{BRAND}} &copy; 2026 &middot; CA License #1079020 &middot; All rights reserved.</span>
+    <span>Serving {{AREA}} & surrounding communities</span>
+  </div>
+</div>
+</footer>
+
+<!-- STICKY BOTTOM CTA -->
+<div class="sticky-cta">
+  <a href="tel:4159079070" class="sticky-phone"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>(415) 907-9070</a>
+  <a href="#contact" class="sticky-estimate">Get a Free Estimate</a>
+</div>
+
+<!-- FORM JS -->
+<script>
+(function(){
+var f=document.getElementById('contactForm'),s=document.getElementById('formStatus');
+if(!f)return;
+f.addEventListener('submit',function(e){
+e.preventDefault();
+s.className='form-status';s.textContent='';
+var b=f.querySelector('button[type="submit"]');b.disabled=true;b.textContent='Sending...';
+var d={name:f.name.value.trim(),phone:f.phone.value.trim(),email:f.email.value.trim(),
+       message:f.message.value.trim(),domain:location.hostname,website:f.website.value};
+if(!d.name||!d.phone||!d.email||!d.message){
+s.className='form-status error';s.textContent='Please fill in all fields.';
+b.disabled=false;b.textContent='Get a Free Estimate';return;}
+fetch('https://app.revnodeai.com/api/public/contact-form',{
+method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)
+}).then(function(r){return r.json()}).then(function(j){
+if(j.status==='ok'){s.className='form-status success';s.textContent='Thank you! We\'ll be in touch shortly.';f.reset();}
+else{s.className='form-status error';s.textContent=j.message||'Something went wrong. Please call us at (415) 907-9070.';}
+}).catch(function(){s.className='form-status error';s.textContent='Something went wrong. Please call us at (415) 907-9070.';
+}).finally(function(){b.disabled=false;b.textContent='Get a Free Estimate';});
+});
+})();
+</script>
+</body>
+</html>

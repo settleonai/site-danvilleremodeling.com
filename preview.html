@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Danville Remodeling — Kitchen & Bathroom Remodeling in Danville</title>
-<meta name="description" content="Danville's trusted home remodeling experts. Kitchen, bathroom & full home remodeling in Danville, Blackhawk, and the San Ramon Valley.">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{META_DESC}}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -202,7 +202,7 @@ img{max-width:100%;display:block}
 
 /* ── CTA BANNER ── */
 .cta-banner{position:relative;padding:80px 0;text-align:center;overflow:hidden}
-.cta-banner-bg{position:absolute;inset:0;background:url('images/hero-kitchen-2.jpg') center/cover;filter:brightness(0.4)}
+.cta-banner-bg{position:absolute;inset:0;background:url('images/kitchen-2.jpg') center/cover;filter:brightness(0.4)}
 .cta-banner-content{position:relative;z-index:2;color:var(--white)}
 .cta-banner h2{color:var(--white);font-size:clamp(28px,4vw,46px);margin-bottom:14px}
 .cta-banner p{font-size:17px;opacity:0.85;max-width:560px;margin:0 auto 28px}
@@ -211,7 +211,7 @@ img{max-width:100%;display:block}
 
 /* ── FOOTER ── */
 .site-footer{position:relative;overflow:hidden}
-.footer-bg{position:absolute;inset:0;background:url('images/hero-bathroom-1.jpg') center/cover}
+.footer-bg{position:absolute;inset:0;background:url('images/bathroom-1.jpg') center/cover}
 .footer-bg::after{content:'';position:absolute;inset:0;background:rgba(10,15,20,0.92)}
 .footer-inner{position:relative;z-index:2;padding:56px 0 24px;color:rgba(255,255,255,0.65)}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px}
@@ -242,7 +242,7 @@ img{max-width:100%;display:block}
 <div class="header-inner">
   <a href="#" class="site-logo">
     <svg viewBox="0 0 60 55"><path d="M30 2L2 26h8v24h16V34h8v16h16V26h8L30 2z" fill="#C4A265"/><path d="M30 8l22 18v22H38V32H22v16H8V26L30 8z" fill="#fff"/><path d="M30 14l16 13v17H32V30h-4v14H14V27L30 14z" fill="#C4A265"/></svg>
-    <div class="site-logo-text">Danville<span>Remodeling</span></div>
+    <div class="site-logo-text">{{LOGO_NAME}}<span>{{LOGO_TAGLINE}}</span></div>
   </a>
   <div class="header-right">
     <a href="tel:4159079070" class="header-phone"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>(415) 907-9070</a>
@@ -266,11 +266,11 @@ img{max-width:100%;display:block}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-slide" style="background-image:url('images/hero-kitchen-1.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('images/kitchen-1.jpg')"></div>
   <div class="hero-content">
     <div class="hero-tagline">Consulting &middot; Designing &middot; Building</div>
-    <h1>Danville's Trusted Home Remodeling Experts</h1>
-    <p class="hero-desc">Premium kitchen, bathroom, and full home remodeling for Danville's finest residences. From Blackhawk estates to classic San Ramon Valley homes, we bring 21+ years of craftsmanship.</p>
+    <h1>{{HERO_HEADLINE}}</h1>
+    <p class="hero-desc">{{HERO_TEXT}}</p>
     <a href="#gallery" class="btn btn-outline" style="border-color:rgba(255,255,255,0.5);color:#fff">View Our Projects</a>
   </div>
 </section>
@@ -302,12 +302,12 @@ img{max-width:100%;display:block}
     <p class="section-desc">Expect nothing less than excellence. We provide professional and reliable home remodeling that completely transforms your space, enhancing its function and style.</p>
   </div>
   <div class="services-grid">
-    <div class="svc-card"><div class="svc-card-img"><img src="images/hero-kitchen-1.jpg" alt="Full Home Remodeling" loading="lazy"></div><div class="svc-card-body"><h3>Full Home Remodeling</h3><p>Update multiple rooms and enjoy a stylish home uniquely designed to meet your lifestyle and needs.</p><a href="#contact" class="link">Read More &rarr;</a></div></div>
-    <div class="svc-card"><div class="svc-card-img"><img src="images/hero-kitchen-2.jpg" alt="Kitchen Remodeling" loading="lazy"></div><div class="svc-card-body"><h3>Kitchen Remodeling</h3><p>Improve function and appeal in your kitchen by modifying the structure, layout, or style.</p><a href="#contact" class="link">Read More &rarr;</a></div></div>
-    <div class="svc-card"><div class="svc-card-img"><img src="images/hero-bathroom-2.jpg" alt="Bathroom Remodeling" loading="lazy"></div><div class="svc-card-body"><h3>Bathroom Remodeling</h3><p>Upgrade your bathroom, maximize space, and prioritize safety with quality fixtures and finishes.</p><a href="#contact" class="link">Read More &rarr;</a></div></div>
-    <div class="svc-card"><div class="svc-card-img"><img src="images/hero-bathroom-3.jpg" alt="ADU Construction" loading="lazy"></div><div class="svc-card-body"><h3>ADU Construction</h3><p>Build a second dwelling to increase property value, improve sustainable living, or generate revenue.</p><a href="#contact" class="link">Read More &rarr;</a></div></div>
-    <div class="svc-card"><div class="svc-card-img"><img src="images/hero-exterior-1.jpg" alt="Home Additions" loading="lazy"></div><div class="svc-card-body"><h3>Home Additions</h3><p>Create more living space with room additions that significantly improve your lifestyle and home value.</p><a href="#contact" class="link">Read More &rarr;</a></div></div>
-    <div class="svc-card"><div class="svc-card-img"><img src="images/hero-outdoor-1.jpg" alt="Outdoor Remodel" loading="lazy"></div><div class="svc-card-body"><h3>Outdoor Remodel</h3><p>The outside of your home should be just as comfortable and enjoyable as the inside.</p><a href="#contact" class="link">Read More &rarr;</a></div></div>
+    <div class="svc-card"><div class="svc-card-img"><img src="images/kitchen-5.jpg" alt="Full Home Remodeling" loading="lazy"></div><div class="svc-card-body"><h3>Full Home Remodeling</h3><p>Update multiple rooms and enjoy a stylish home uniquely designed to meet your lifestyle and needs.</p><a href="#contact" class="link">Read More &rarr;</a></div></div>
+    <div class="svc-card"><div class="svc-card-img"><img src="images/kitchen-3.jpg" alt="Kitchen Remodeling" loading="lazy"></div><div class="svc-card-body"><h3>Kitchen Remodeling</h3><p>Improve function and appeal in your kitchen by modifying the structure, layout, or style.</p><a href="#contact" class="link">Read More &rarr;</a></div></div>
+    <div class="svc-card"><div class="svc-card-img"><img src="images/bathroom-2.jpg" alt="Bathroom Remodeling" loading="lazy"></div><div class="svc-card-body"><h3>Bathroom Remodeling</h3><p>Upgrade your bathroom, maximize space, and prioritize safety with quality fixtures and finishes.</p><a href="#contact" class="link">Read More &rarr;</a></div></div>
+    <div class="svc-card"><div class="svc-card-img"><img src="images/kitchen-7.jpg" alt="ADU Construction" loading="lazy"></div><div class="svc-card-body"><h3>ADU Construction</h3><p>Build a second dwelling to increase property value, improve sustainable living, or generate revenue.</p><a href="#contact" class="link">Read More &rarr;</a></div></div>
+    <div class="svc-card"><div class="svc-card-img"><img src="images/outdoor-1.jpg" alt="Home Additions" loading="lazy"></div><div class="svc-card-body"><h3>Home Additions</h3><p>Create more living space with room additions that significantly improve your lifestyle and home value.</p><a href="#contact" class="link">Read More &rarr;</a></div></div>
+    <div class="svc-card"><div class="svc-card-img"><img src="images/outdoor-3.jpg" alt="Outdoor Remodel" loading="lazy"></div><div class="svc-card-body"><h3>Outdoor Remodel</h3><p>The outside of your home should be just as comfortable and enjoyable as the inside.</p><a href="#contact" class="link">Read More &rarr;</a></div></div>
   </div>
 </div>
 </section>
@@ -321,10 +321,7 @@ img{max-width:100%;display:block}
     <p class="section-desc">With hundreds of 5-star reviews across Google, Yelp, Houzz, and more, we are proud to be the trusted choice for home remodeling.</p>
   </div>
   <div class="reviews-track">
-    <div class="review-card"><div class="review-head"><div class="review-avatar">R</div><div><div class="review-name">Richard & Diane M.</div><div class="review-date">2 weeks ago</div></div></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>We hired them to remodel our kitchen in Blackhawk and the result exceeded every expectation. The construction crew was punctual, clean, and professional every single day.</p></div>
-    <div class="review-card"><div class="review-head"><div class="review-avatar">C</div><div><div class="review-name">Catherine L.</div><div class="review-date">1 month ago</div></div></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>After living near the Diablo Country Club for 15 years, we finally updated both bathrooms. The heated floors and frameless shower are exactly what we wanted.</p></div>
-    <div class="review-card"><div class="review-head"><div class="review-avatar">J</div><div><div class="review-name">John & Barbara K.</div><div class="review-date">6 weeks ago</div></div></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Our Danville colonial got the kitchen it deserved — custom cabinetry, marble countertops, and a layout that finally makes sense for our family.</p></div>
-    <div class="review-card"><div class="review-head"><div class="review-avatar">P</div><div><div class="review-name">Peter S.</div><div class="review-date">2 months ago</div></div></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>The outdoor living space they designed and built has transformed how we use our backyard. Flagstone patio, pergola, and built-in seating. Beautiful.</p></div>
+    {{REVIEWS_HTML}}
   </div>
   <div class="review-platforms">
     <span>Google</span><span>&middot;</span><span>Yelp</span><span>&middot;</span><span>Houzz</span><span>&middot;</span><span>Angi</span><span>&middot;</span><span>Thumbtack</span>
@@ -337,7 +334,7 @@ img{max-width:100%;display:block}
 <div class="container">
   <div class="section-header">
     <span class="section-label">Why Choose Us</span>
-    <h2 class="section-title">Why Homeowners Trust Danville Remodeling</h2>
+    <h2 class="section-title">Why Homeowners Trust {{BRAND}}</h2>
   </div>
   <div class="trust-grid">
     <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h4>Licensed & Insured</h4><p>CA Lic. #1079020. Peace of mind with professional guarantees on every project.</p></div></div>
@@ -378,39 +375,9 @@ img{max-width:100%;display:block}
     <button class="g-filter" onclick="filterGallery('kitchen')">Kitchens</button>
     <button class="g-filter" onclick="filterGallery('bathroom')">Bathrooms</button>
     <button class="g-filter" onclick="filterGallery('outdoor')">Outdoor</button>
-    <button class="g-filter" onclick="filterGallery('detail')">Details</button>
   </div>
   <div class="gallery-grid">
-    <div class="g-item" data-category="kitchen" onclick="openLightbox(0)"><img src="images/kitchen-1.jpg" alt="Kitchen Remodel" loading="lazy"><div class="g-ov"><span>Kitchen Remodel</span></div></div>
-    <div class="g-item" data-category="kitchen" onclick="openLightbox(1)"><img src="images/kitchen-2.jpg" alt="Kitchen Remodel" loading="lazy"><div class="g-ov"><span>Kitchen Remodel</span></div></div>
-    <div class="g-item" data-category="kitchen" onclick="openLightbox(2)"><img src="images/kitchen-3.jpg" alt="Kitchen Remodel" loading="lazy"><div class="g-ov"><span>Kitchen Remodel</span></div></div>
-    <div class="g-item" data-category="bathroom" onclick="openLightbox(3)"><img src="images/bathroom-1.jpg" alt="Bathroom Renovation" loading="lazy"><div class="g-ov"><span>Bathroom Renovation</span></div></div>
-    <div class="g-item" data-category="bathroom" onclick="openLightbox(4)"><img src="images/bathroom-2.jpg" alt="Bathroom Renovation" loading="lazy"><div class="g-ov"><span>Bathroom Renovation</span></div></div>
-    <div class="g-item" data-category="bathroom" onclick="openLightbox(5)"><img src="images/bathroom-3.jpg" alt="Bathroom Renovation" loading="lazy"><div class="g-ov"><span>Bathroom Renovation</span></div></div>
-    <div class="g-item" data-category="bathroom" onclick="openLightbox(6)"><img src="images/bathroom-4.jpg" alt="Bathroom Renovation" loading="lazy"><div class="g-ov"><span>Bathroom Renovation</span></div></div>
-    <div class="g-item" data-category="bathroom" onclick="openLightbox(7)"><img src="images/bathroom-5.jpg" alt="Bathroom Renovation" loading="lazy"><div class="g-ov"><span>Bathroom Renovation</span></div></div>
-    <div class="g-item" data-category="bathroom" onclick="openLightbox(8)"><img src="images/bathroom-6.jpg" alt="Bathroom Renovation" loading="lazy"><div class="g-ov"><span>Bathroom Renovation</span></div></div>
-    <div class="g-item" data-category="bathroom" onclick="openLightbox(9)"><img src="images/bathroom-7.jpg" alt="Bathroom Renovation" loading="lazy"><div class="g-ov"><span>Bathroom Renovation</span></div></div>
-    <div class="g-item" data-category="bathroom" onclick="openLightbox(10)"><img src="images/bathroom-8.jpg" alt="Bathroom Renovation" loading="lazy"><div class="g-ov"><span>Bathroom Renovation</span></div></div>
-    <div class="g-item" data-category="outdoor" onclick="openLightbox(11)"><img src="images/outdoor-1.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
-    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(12)"><img src="images/outdoor-2.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
-    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(13)"><img src="images/outdoor-3.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
-    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(14)"><img src="images/outdoor-4.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
-    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(15)"><img src="images/outdoor-5.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
-    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(16)"><img src="images/outdoor-6.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
-    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(17)"><img src="images/outdoor-7.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
-    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(18)"><img src="images/outdoor-8.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
-    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(19)"><img src="images/outdoor-9.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
-    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(20)"><img src="images/outdoor-10.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
-    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(21)"><img src="images/outdoor-11.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
-    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(22)"><img src="images/outdoor-12.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
-    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(23)"><img src="images/outdoor-13.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
-    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(24)"><img src="images/outdoor-14.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
-    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(25)"><img src="images/outdoor-15.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
-    <div class="g-item" data-category="detail" style="display:none" onclick="openLightbox(26)"><img src="images/detail-1.jpg" alt="Craftsmanship Detail" loading="lazy"><div class="g-ov"><span>Craftsmanship Detail</span></div></div>
-    <div class="g-item" data-category="detail" style="display:none" onclick="openLightbox(27)"><img src="images/detail-2.jpg" alt="Craftsmanship Detail" loading="lazy"><div class="g-ov"><span>Craftsmanship Detail</span></div></div>
-    <div class="g-item" data-category="detail" style="display:none" onclick="openLightbox(28)"><img src="images/detail-3.jpg" alt="Craftsmanship Detail" loading="lazy"><div class="g-ov"><span>Craftsmanship Detail</span></div></div>
-    <div class="g-item" data-category="detail" style="display:none" onclick="openLightbox(29)"><img src="images/detail-4.jpg" alt="Craftsmanship Detail" loading="lazy"><div class="g-ov"><span>Craftsmanship Detail</span></div></div>
+{{GALLERY_ITEMS}}
   </div>
   <div class="g-more" id="showMoreBtn"><button onclick="showAllPhotos()">View All 30 Photos</button></div>
 </div>
@@ -436,7 +403,6 @@ img{max-width:100%;display:block}
         <div class="ct-item"><div class="ct-dot"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><strong>Licensed & Insured</strong><br><span class="ct-sub">CA Lic. #1079020</span></div></div>
         <div class="ct-item"><div class="ct-dot"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div><strong>200+ Five-Star Reviews</strong><br><span class="ct-sub">Trusted by Bay Area families</span></div></div>
         <div class="ct-item"><div class="ct-dot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><strong>Proposal in 12 Hours</strong><br><span class="ct-sub">Fast, transparent pricing</span></div></div>
-        <div class="ct-item"><div class="ct-dot"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><strong>1990 N. California Blvd, 8th Floor</strong><br><span class="ct-sub">Walnut Creek, CA 94596</span></div></div>
       </div>
     </div>
     <div>
@@ -476,7 +442,7 @@ img{max-width:100%;display:block}
     <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much does it cost to remodel?</button><div class="faq-a"><p>Costs depend on the scope, materials, and labor. Kitchen remodels typically start around $30,000 and full home remodels at $150,000+. We provide detailed estimates within 12 hours of your consultation.</p></div></div>
     <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do you handle permits and inspections?</button><div class="faq-a"><p>Yes. We handle all paperwork including permits and inspections. We are well-versed in local building codes for a hassle-free renovation.</p></div></div>
     <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do you offer financing?</button><div class="faq-a"><p>Yes. We offer flexible financing options to make your dream remodel more affordable. Contact us to discuss available plans.</p></div></div>
-    <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What areas do you serve?</button><div class="faq-a"><p>We serve Danville and surrounding communities including Blackhawk, Diablo Country Club, Downtown Danville, Alamo, Diablo, Tassajara Valley, and San Ramon Valley.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What areas do you serve?</button><div class="faq-a"><p>We serve {{AREA}} and surrounding communities including {{NEIGHBORHOODS_TEXT}}.</p></div></div>
   </div>
 </div>
 </section>
@@ -500,10 +466,9 @@ img{max-width:100%;display:block}
   <div class="container footer-inner">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand">Danville <em>Remodeling</em></div>
-        <p class="footer-text">Danville's premier home remodeling contractor. Kitchen, bathroom, and full home renovation for Blackhawk, Alamo, and the San Ramon Valley.</p>
+        <div class="footer-brand">{{LOGO_NAME}} <em>{{LOGO_TAGLINE}}</em></div>
+        <p class="footer-text">{{FOOTER_DESC}}</p>
         <div class="footer-phone">Phone: <a href="tel:4159079070">(415) 907-9070</a></div>
-        <div style="margin-top:8px;font-size:13px">1990 N. California Blvd, 8th Floor, Walnut Creek, CA 94596</div>
       </div>
       <div>
         <h4>Services</h4>
@@ -515,8 +480,8 @@ img{max-width:100%;display:block}
       </div>
     </div>
     <div class="footer-bar">
-      <span>Danville Remodeling &copy; 2026 &middot; CA License 1079020 &middot; All rights reserved.</span>
-      <span>Serving Danville & surrounding communities</span>
+      <span>{{BRAND}} &copy; 2026 &middot; CA License 1079020 &middot; All rights reserved.</span>
+      <span>Serving {{AREA}} & surrounding communities</span>
     </div>
   </div>
 </footer>
@@ -531,7 +496,7 @@ img{max-width:100%;display:block}
 var promoIdx=0;function goPromo(i){promoIdx=i;document.getElementById('promoSlides').style.transform='translateX(-'+i*33.333+'%)';document.querySelectorAll('.promo-dot').forEach(function(d,j){d.classList.toggle('active',j===i)});}setInterval(function(){goPromo((promoIdx+1)%3)},5000);
 </script>
 <script>
-const galleryPhotos=['images/kitchen-1.jpg','images/kitchen-2.jpg','images/kitchen-3.jpg','images/bathroom-1.jpg','images/bathroom-2.jpg','images/bathroom-3.jpg','images/bathroom-4.jpg','images/bathroom-5.jpg','images/bathroom-6.jpg','images/bathroom-7.jpg','images/bathroom-8.jpg','images/outdoor-1.jpg','images/outdoor-2.jpg','images/outdoor-3.jpg','images/outdoor-4.jpg','images/outdoor-5.jpg','images/outdoor-6.jpg','images/outdoor-7.jpg','images/outdoor-8.jpg','images/outdoor-9.jpg','images/outdoor-10.jpg','images/outdoor-11.jpg','images/outdoor-12.jpg','images/outdoor-13.jpg','images/outdoor-14.jpg','images/outdoor-15.jpg','images/detail-1.jpg','images/detail-2.jpg','images/detail-3.jpg','images/detail-4.jpg'];
+const galleryPhotos=['images/kitchen-1.jpg','images/kitchen-2.jpg','images/kitchen-3.jpg','images/kitchen-4.jpg','images/kitchen-5.jpg','images/kitchen-6.jpg','images/kitchen-7.jpg','images/kitchen-8.jpg','images/kitchen-9.jpg','images/kitchen-10.jpg','images/kitchen-11.jpg','images/kitchen-12.jpg','images/kitchen-13.jpg','images/kitchen-14.jpg','images/kitchen-15.jpg','images/bathroom-1.jpg','images/bathroom-2.jpg','images/bathroom-3.jpg','images/bathroom-4.jpg','images/bathroom-5.jpg','images/bathroom-6.jpg','images/bathroom-7.jpg','images/bathroom-8.jpg','images/bathroom-9.jpg','images/bathroom-10.jpg','images/outdoor-1.jpg','images/outdoor-2.jpg','images/outdoor-3.jpg','images/outdoor-4.jpg','images/detail-1.jpg'];
 let currentPhoto=0,visiblePhotos=galleryPhotos.map((_,i)=>i);
 function filterGallery(cat){document.querySelectorAll('.g-filter').forEach(b=>b.classList.remove('active'));event.target.classList.add('active');document.querySelectorAll('.g-item').forEach(item=>{item.style.display=(cat==='all'||item.dataset.category===cat)?'':'none'});document.getElementById('showMoreBtn').style.display='none';visiblePhotos=[];document.querySelectorAll('.g-item').forEach((item,i)=>{if(item.style.display!=='none')visiblePhotos.push(i)});}
 function showAllPhotos(){document.querySelectorAll('.g-item').forEach(item=>{if(item.dataset.category)item.style.display=''});document.getElementById('showMoreBtn').style.display='none';visiblePhotos=galleryPhotos.map((_,i)=>i);}
